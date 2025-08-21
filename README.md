@@ -1,6 +1,5 @@
 # mocha-play
 
-[![Build Status](https://github.com/wixplosives/mocha-play/workflows/tests/badge.svg)](https://github.com/wixplosives/mocha-play/actions)
 [![npm version](https://img.shields.io/npm/v/mocha-play.svg)](https://www.npmjs.com/package/mocha-play)
 
 Run mocha tests in chromium, using webpack and playwright.
