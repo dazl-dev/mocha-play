@@ -1,14 +1,12 @@
+// @ts-check
+
 import pluginJs from '@eslint/js';
 import configPrettier from 'eslint-config-prettier';
 import pluginNoOnlyTests from 'eslint-plugin-no-only-tests';
+import { defineConfig } from 'eslint/config';
 import pluginTypescript from 'typescript-eslint';
 
-for (const config of pluginTypescript.configs.recommendedTypeChecked) {
-  config.files = ['**/*.{ts,tsx,mts,cts}']; // ensure config only targets TypeScript files
-}
-
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default defineConfig([
   { ignores: ['dist/'] },
   pluginJs.configs.recommended,
   { plugins: { 'no-only-tests': pluginNoOnlyTests } },
@@ -20,8 +18,8 @@ export default [
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
-  ...pluginTypescript.configs.recommendedTypeChecked,
-  { languageOptions: { parserOptions: { projectService: true} } },
+  ...pluginTypescript.configs.recommendedTypeChecked.map((config) => ({ ...config, files: ['**/*.{ts,tsx,mts,cts}'] })),
+  { languageOptions: { parserOptions: { projectService: true } } },
   {
     files: ['**/*.{ts,tsx,mts,cts}'],
     rules: {
@@ -29,4 +27,4 @@ export default [
     },
   },
   configPrettier,
-];
+]);
