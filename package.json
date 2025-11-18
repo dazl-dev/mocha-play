@@ -30,7 +30,7 @@
     "create-listening-server": "^2.1.0",
     "express": "^5.1.0",
     "find-up": "^8.0.0",
-    "glob": "^11.0.3",
+    "glob": "^12.0.0",
     "html-webpack-plugin": "^5.6.4",
     "playwright-core": "^1.56.1",
     "webpack-dev-middleware": "^7.4.5"
@@ -50,7 +50,7 @@
     "prettier": "^3.6.2",
     "rimraf": "^6.1.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
+    "typescript-eslint": "^8.47.0",
     "webpack": "^5.102.1"
   },
   "files": [
