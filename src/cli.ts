@@ -67,7 +67,9 @@ program
       }
     }
 
-    const launchOptions: playwright.LaunchOptions | undefined = watch ? { devtools: true } : undefined;
+    const launchOptions: playwright.LaunchOptions | undefined = watch
+      ? { headless: false, args: ['--auto-open-devtools-for-tabs'] }
+      : undefined;
 
     const browserContextOptions: playwright.BrowserContextOptions = watch
       ? { viewport: null }
