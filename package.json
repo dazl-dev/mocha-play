@@ -32,12 +32,12 @@
     "find-up": "^8.0.0",
     "glob": "^13.0.6",
     "html-webpack-plugin": "^5.6.6",
-    "playwright-core": "^1.59.0",
+    "playwright-core": "^1.59.1",
     "webpack-dev-middleware": "^8.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@playwright/browser-chromium": "^1.59.0",
+    "@playwright/browser-chromium": "^1.59.1",
     "@ts-tools/webpack-loader": "^6.1.0",
     "@types/chai": "^5.2.3",
     "@types/express": "^5.0.6",
