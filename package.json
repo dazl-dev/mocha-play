@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@playwright/browser-chromium": "^1.61.0",
+    "@playwright/browser-chromium": "^1.61.1",
     "@ts-tools/webpack-loader": "^6.1.0",
     "@types/chai": "^5.2.3",
     "@types/express": "^5.0.6",
