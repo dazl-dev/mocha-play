@@ -31,7 +31,6 @@ export function hookPageConsole(page: playwright.Page): () => void {
   return () => page.off('console', onConsoleMessage);
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const messageTypeToConsoleFn: { [key: string]: (...args: any[]) => void } = {
   log: console.log,
   warning: console.warn,
@@ -57,7 +56,6 @@ const messageTypeToConsoleFn: { [key: string]: (...args: any[]) => void } = {
 
 function deferred<T = void>() {
   let resolve!: (value: T | PromiseLike<T>) => void;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let reject!: (reason?: any) => void;
   const promise = new Promise<T>((res, rej) => {
     resolve = res;
