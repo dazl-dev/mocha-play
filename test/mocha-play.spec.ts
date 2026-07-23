@@ -93,10 +93,12 @@ describe('mocha-play', function () {
   });
 
   it('fails when there are bundling errors', () => {
-    const { output, status } = runMochaPlay({ args: ['./typescript-file.ts'], fixture: 'custom-config' });
+    const { output, status } = runMochaPlay({
+      args: ['./unknown-file.unknown'],
+    });
 
     expect(output).to.include('Found 1 test files');
-    expect(output).to.include('ERROR in ./typescript-file.ts');
+    expect(output).to.include('ERROR in ./unknown-file.unknown');
     expect(output).to.include('Module parse failed: Unexpected token');
     expect(output).to.include('You may need an appropriate loader to handle this file type');
     expect(status).to.equal(1);
