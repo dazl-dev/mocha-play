@@ -46,7 +46,7 @@
     "prettier": "^3.9.6",
     "rimraf": "^6.1.3",
     "typescript": "~6.0.3",
-    "webpack": "^5.109.1"
+    "webpack": "^5.109.2"
   },
   "allowScripts": {
     "@playwright/browser-chromium": true
